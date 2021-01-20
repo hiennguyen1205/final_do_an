@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="..\css\taisan.css" />
+    <title>Hello, world!</title>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"
+    />
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <script>
+      var $table = $("#table");
+      var my_data = [
+        {
+          stt: "0",
+          name: "Máy truyền dịch",
+          model: "IP200",
+          sr: "1501955",
+          company: "Meditec England",
+          country: "Anh",
+          year: "2014",
+          dv: "Chiếc",
+          sl: "1",
+          vnd: "0",
+          usd: "0",
+          money: "0",
+          khoa: "Cấp cứu",
+          date: "24/04/2015",
+          gt: "CO,CQ, BBBG(Tỉnh)",
+          nguon: "null",
+          gc: "null",
+        },
+        {
+          stt: "1",
+          name: "Máy điện giải",
+          model: "Convergys ISE Comfort",
+          sr: "CT-ISE-Comfort-2305",
+          company: "Convergent",
+          country: "Đức",
+          year: "2016",
+          dv: "Chiếc",
+          sl: "1",
+          vnd: "0",
+          usd: "0",
+          money: "0",
+          khoa: "ICU",
+          date: "03/03/2017",
+          gt: "null",
+          nguon: "null",
+          gc: "null",
+        },
+        {
+          stt: "2",
+          name: "Máy đông máu",
+          model: "CoaLAB 1000",
+          sr: "J30600393",
+          company: "LABiTec Labor BioMedical",
+          country: "Đức",
+          year: "2016",
+          dv: "Chiếc",
+          sl: "1",
+          vnd: "0",
+          usd: "0",
+          money: "0",
+          khoa: "Huyết học",
+          date: "01/03/2017",
+          gt: "null",
+          nguon: "null",
+          gc: "null",
+        },
+        {
+          stt: "3",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3123123c2",
+          country: "4wxad",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+        {
+          stt: "4",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3",
+          country: "4",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+        {
+          stt: "5",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3",
+          country: "4",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+        {
+          stt: "6",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3",
+          country: "4",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+        {
+          stt: "7",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3",
+          country: "4",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+        {
+          stt: "8",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3",
+          country: "4",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+        {
+          stt: "9",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3",
+          country: "4",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+        {
+          stt: "10",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3",
+          country: "4",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+        {
+          stt: "11",
+          name: "test0",
+          model: "1",
+          sr: "2",
+          company: "3",
+          country: "4",
+          year: "5",
+          dv: "6",
+          sl: "7",
+          vnd: "8",
+          usd: "9",
+          money: "10",
+          khoa: "11",
+          date: "12",
+          gt: "13",
+          nguon: "14",
+          gc: "15",
+        },
+      ];
+
+      $(function () {
+        $("#table").bootstrapTable({
+          data: my_data,
+        });
+      });
+
+      function detailFormatter(index, row) {
+        $("#table > tbody > tr").click(function () {
+          var dom = document.getElementsByClassName("detail-view");
+          for (const key of dom) {
+            key.remove();
+          }
+          $(this).addClass("highlight").siblings().removeClass("highlight");
+        });
+        document.getElementById("detail").style.display = "block";
+        $("#table > tbody > tr").dblclick(function () {
+          $("#myModal").modal("show");
+        });
+        $.each(row, function (key, value) {
+          switch (key) {
+            case "name":
+              document.getElementById("nameDetail").innerHTML = value;
+              document.getElementById("modalName").innerHTML = value;
+              break;
+            case "model":
+              document.getElementById("modelDetail").innerHTML = value;
+              document.getElementById("modalModel").innerHTML = value;
+              break;
+            case "sr":
+              document.getElementById("modalSr").innerHTML = value;
+              break;
+            case "company":
+              document.getElementById("companyDetail").innerHTML = value;
+              document.getElementById("modalCompany").innerHTML = value;
+              break;
+            case "country":
+              document.getElementById("countryDetail").innerHTML = value;
+              document.getElementById("modalCountry").innerHTML = value;
+              break;
+            case "year":
+              document.getElementById("modalYear").innerHTML = value;
+              break;
+            case "dv":
+              document.getElementById("ModalDv").innerHTML = value;
+              break;
+            case "sl":
+              document.getElementById("modalSl").innerHTML = value;
+              break;
+            case "vnd":
+              document.getElementById("modalVnd").innerHTML = value;
+              break;
+            case "usd":
+              document.getElementById("modalUsd").innerHTML = value;
+              break;
+            case "money":
+              document.getElementById("modalMoney").innerHTML = value;
+              break;
+            case "khoa":
+              document.getElementById("modalKhoa").innerHTML = value;
+              break;
+            default:
+              break;
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="menu_top">
+      <nav>
+            
+        <ul>
+            
+            <li><a class="active" href="#">TRANG CHỦ</a> </li>
+            <li><a href="#">PHÒNG BAN <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">HSCC</a></li>
+                    <li><a href="#">NHI</a></li>
+                    <li><a href="#">LAO</a></li>
+                </ul> 
+            </li>
+            <li><a href="#">THIẾT BỊ</a> </li>
+            <li><a href="#">BÁO CÁO- THỐNG KÊ <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">BÁO CÁO</a></li>
+                    <li><a href="#">THỐNG KÊ</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#">LẬP PHIẾU <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">BIÊN BẢN KIỂM TRA TÌNH TRẠNG</a></li>
+                    <li><a href="#">PHIẾU YÊU CẦU SỬA CHỮA</a></li>
+                    <li><a href="#">PHIẾU BẢO DƯỠNG</a></li>
+                    <li><a href="#">PHIẾU BÀN GIAO</a></li>
+                    <li><a href="#">PHIẾU THANH LÝ</a></li>
+                </ul>
+            </li>
+            <li><a href="#">SỔ THEO DÕI</a> </li>
+            <li><a href="#">THÊM DỮ LIỆU</a> </li>
+            <li><a href="#">CÁ NHÂN</a> </li>
+            
+            
+        </ul>
+        
+    </nav>
+
+    <section></section>
+    </div>
+    <div class="content d-flex">
+      <div class="left-content">
+        <div id="accordion">
+          <div class="">
+            <div class="" id="headingOne">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Benh vien da khao tinh Hoa Binh
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <ul class="nav nav-pills brand-pills nav-stacked ml-4" role="tablist">
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab1"
+                    aria-controls="tab1"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 1
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab2"
+                    aria-controls="tab2"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 2</a
+                  >
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab3"
+                    aria-controls="tab3"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 3</a
+                  >
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab4"
+                    aria-controls="tab4"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 4
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab5"
+                    aria-controls="tab5"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 5
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab6"
+                    aria-controls="tab6"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 6
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab7"
+                    aria-controls="tab7"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 7
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab8"
+                    aria-controls="tab8"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 8
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab9"
+                    aria-controls="tab9"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 9
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab10"
+                    aria-controls="tab10"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 10
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab11"
+                    aria-controls="tab11"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 11
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab12"
+                    aria-controls="tab12"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 12
+                  </a>
+                </li>
+                <li role="presentation" class="brand-nav">
+                  <a
+                    href="#tab1"
+                    aria-controls="tab1"
+                    role="tab"
+                    data-toggle="tab"
+                    >Khoa kham benh 13
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="">
+            <div class="" id="headingTwo">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Bệnh Viện Nghệ An
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="ml-4">Bệnh Viện Ba Lan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-content">
+        <div role="tabpanel">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" id="tab1">
+              Y Học Cổ truyền
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab2">
+              <table
+                class="flags-table"
+                id="table"
+                data-height="460"
+                data-search="true"
+                data-search-align="left"
+                data-pagination="true"
+                data-pagination-h-align="left"
+                data-pagination-detail-h-align="right"
+                data-detail-view="true"
+                data-detail-view-icon="false"
+                data-detail-view-by-click="true"
+                data-detail-formatter="detailFormatter"
+              >
+                <thead>
+                  <tr>
+                    <th data-field="stt">STT</th>
+                    <th data-field="name">Tên TB</th>
+                    <th data-field="model">Model</th>
+                    <th data-field="sr">Sr.No</th>
+                    <th data-field="company">Hãng SX</th>
+                    <th data-field="country">Nước SX</th>
+                    <th data-field="year">Năm SX</th>
+                    <th data-field="dv">Đơn vị</th>
+                    <th data-field="sl">Số lượng</th>
+                    <th data-field="vnd">Đơn giá (VNĐ)</th>
+                    <th data-field="usd">Đơn giá (USD)</th>
+                    <th data-field="money">Thành tiền</th>
+                    <th data-field="khoa">Khoa sử dụng</th>
+                    <th data-field="date">Ngày bàn giao</th>
+                    <th data-field="gt">Giấy tờ</th>
+                    <th data-field="nguon">Nguồn</th>
+                    <th data-field="gc">Ghi chú</th>
+                  </tr>
+                </thead>
+              </table>
+              <div id="detail">
+                <div id="tab">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="home-tab"
+                      data-toggle="tab"
+                      href="#home"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                      >Thông tin chung</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >Thông tin kê khai</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="contact-tab"
+                      data-toggle="tab"
+                      href="#contact"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                      >Lịch sử biến động</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="file-tab"
+                      data-toggle="tab"
+                      href="#file"
+                      role="tab"
+                      aria-controls="file"
+                      aria-selected="false"
+                      >Tệp đính kèm</a
+                    >
+                  </li>
+                </ul>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <p><b>Tên TB</b>: <span id="nameDetail"></span></p>
+                    <p><b>Model</b>: <span id="modelDetail"></span></p>
+                    <p><b>Hãng SX</b>: <span id="companyDetail"></span></p>
+                    <p><b>Nước SX</b>: <span id="countryDetail"></span></p>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    2
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    3
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="file"
+                    role="tabpanel"
+                    aria-labelledby="file-tab"
+                  >
+                    4
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab3">Mắt Trung Ương</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Thông tin chung</p>
+            <div class="row">
+              <div class="col-md-6">
+                <p>Tên TB: <span id="modalName"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Model: <span id="modalModel"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>SR.no: <span id="modalSr"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Hãng SX: <span id="modalCompany"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Nước SX: <span id="modalCountry"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Năm SX: <span id="modalYear"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Đơn vị: <span id="ModalDv"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Số lượng: <span id="modalSl"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Đơn gía (VNĐ): <span id="modalVnd"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Đơn giá (USD): <span id="modalUsd"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Thành tiền: <span id="modalMoney"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p>Khoa sử dụng: <span id="modalKhoa"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p><b>BỆNH VIỆN ĐA KHOA TỈNH HÒA BÌNH</b></p>
+      <p>Địa chỉ: Số xx, Đường xxxxxxxx, Quận xxxxxxxxx, Tỉnh Hòa Bình | Email: xxxxxx@gmail.com</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spring Boot Security</title>
+</head>
+<body>
+  <h2>Staff Page</h2>
+  <h3>
+    Welcome : <span th:utext="${#request.userPrincipal.name}"></span>
+    Họ và tên: Nguyễn Thị C </br>
+    Mã nhân viên: user2 </br>
+    Mã phòng ban: hoisuc </br>
+    Giói tính: Nữ </br>
+    Ngày sinh: 15/06/1988 </br>
+    Email: c.nguyenthi@gmail.com </br>
+    Điện thoại: 097798445 </br>
+    Chứng minh nhân dân/Căn cước công dân: 013539119 </br>
+  </h3>
+  <br/>
+  <form th:action="@{/j_spring_security_logout}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <input type="submit" value="Logout" />
+  </form>
+</body>
+</html>
